@@ -33,7 +33,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 <style>
 /* ============================================================
@@ -59,8 +59,10 @@
   --ink-50:#61756C;
   --amber:#C98A1E;
 
-  --display:'Fraunces',Georgia,serif;
-  --body:'Instrument Sans',system-ui,-apple-system,sans-serif;
+  /* Para inverter o par (Montserrat nos títulos, Roboto no corpo),
+     basta trocar os dois valores abaixo — nada mais muda. */
+  --display:'Roboto',system-ui,Arial,sans-serif;
+  --body:'Montserrat',system-ui,-apple-system,sans-serif;
 
   --wrap:1180px;
   --gut:clamp(20px,5vw,64px);
@@ -77,7 +79,8 @@ body{
   font-family:var(--body);
   /* Público majoritariamente 45+: corpo base em 18px, nunca menos. */
   font-size:18px;
-  line-height:1.62;
+  line-height:1.7;
+  letter-spacing:-.005em;
   font-feature-settings:"kern" 1,"liga" 1;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -90,43 +93,44 @@ a{color:inherit}
 
 /* ============================================================
    TIPOGRAFIA
-   Fraunces (serif variável) nos títulos, com eixo óptico ajustado
-   por tamanho: opsz alto nos títulos grandes deixa a serifa mais
-   fina e elegante; opsz baixo nos pequenos engrossa e mantém
-   legibilidade. Instrument Sans em corpo e interface.
+   Roboto nos títulos, Montserrat no corpo e na interface.
+   Roboto pede tracking negativo em tamanho grande (ela abre muito)
+   e peso 700 para ter presença sem serifa. Montserrat é larga e de
+   x-height alta: o corpo ganha linha mais folgada (1.7), medida mais
+   curta e tracking levemente negativo para não parecer esticada.
    ============================================================ */
 h1,h2,h3{
   font-family:var(--display);
-  font-weight:600;margin:0;
-  line-height:1.04;letter-spacing:-.022em;
+  font-weight:700;margin:0;
+  line-height:1.06;letter-spacing:-.02em;
   text-wrap:balance;
 }
 h1{
-  font-size:clamp(2.5rem,6.2vw,4.5rem);
-  font-variation-settings:"opsz" 120;
-  letter-spacing:-.032em;line-height:1.0;
+  font-size:clamp(2.5rem,6.2vw,4.4rem);
+  font-weight:700;
+  letter-spacing:-.035em;line-height:1.02;
 }
-h1 em{font-style:italic;font-weight:500;font-variation-settings:"opsz" 120}
+/* Roboto itálica não tem brilho nenhum — a ênfase do H1 vira cor,
+   não inclinação. */
+h1 em{font-style:normal;color:var(--green)}
 h2{
-  font-size:clamp(1.95rem,4.2vw,3.05rem);
-  font-variation-settings:"opsz" 72;
-  letter-spacing:-.028em;line-height:1.06;
+  font-size:clamp(1.95rem,4.2vw,3rem);
+  letter-spacing:-.03em;line-height:1.08;
 }
 h3{
-  font-size:clamp(1.18rem,2vw,1.42rem);
-  font-variation-settings:"opsz" 24;
-  font-weight:600;letter-spacing:-.012em;line-height:1.2;
+  font-size:clamp(1.16rem,2vw,1.38rem);
+  font-weight:700;letter-spacing:-.014em;line-height:1.25;
 }
 p{text-wrap:pretty}
 
 .eyebrow{
   font-family:var(--body);
-  font-size:.735rem;font-weight:600;text-transform:uppercase;
-  letter-spacing:.2em;color:var(--green);margin:0 0 1.15rem;
+  font-size:.72rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.18em;color:var(--green);margin:0 0 1.15rem;
 }
 .lead{
-  font-size:clamp(1.06rem,1.7vw,1.24rem);
-  line-height:1.55;color:var(--ink-70);max-width:56ch;
+  font-size:clamp(1.04rem,1.6vw,1.2rem);
+  line-height:1.6;color:var(--ink-70);max-width:52ch;
 }
 .section > .wrap > .lead{margin-top:1.5rem}
 .num{font-variant-numeric:tabular-nums}
@@ -179,8 +183,8 @@ p{text-wrap:pretty}
 }
 .brand{display:flex;flex-direction:column;line-height:1.1;text-decoration:none;margin-right:auto}
 .brand b{
-  font-family:var(--display);font-weight:700;font-size:1.24rem;
-  font-variation-settings:"opsz" 18;letter-spacing:-.02em;
+  font-family:var(--display);font-weight:900;font-size:1.26rem;
+  letter-spacing:-.03em;text-transform:uppercase;
 }
 .brand small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50)}
 .nav{display:none;gap:1.7rem}
@@ -257,7 +261,7 @@ p{text-wrap:pretty}
   position:relative;overflow:hidden;
 }
 .svc-main .eyebrow{color:var(--sage)}
-.svc-main h3{font-size:clamp(1.65rem,3vw,2.15rem);font-variation-settings:"opsz" 48;margin-bottom:.9rem}
+.svc-main h3{font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.03em;margin-bottom:.9rem}
 .svc-main p{color:rgba(251,253,251,.78);margin:0 0 1.9rem;font-size:1.03rem;max-width:44ch}
 .svc-main > .shade{margin-bottom:1.7rem;height:6px;max-width:60%}
 .svc-main a{margin-top:auto;align-self:flex-start;position:relative;z-index:2}
@@ -280,8 +284,8 @@ p{text-wrap:pretty}
 }
 .svc-list .thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
 .svc-list b{
-  display:block;font-family:var(--display);font-weight:600;font-size:1.08rem;
-  font-variation-settings:"opsz" 20;letter-spacing:-.01em;line-height:1.25;
+  display:block;font-family:var(--display);font-weight:700;font-size:1.06rem;
+  letter-spacing:-.015em;line-height:1.3;
 }
 .svc-list span{font-size:.94rem;color:var(--ink-50);line-height:1.45}
 
@@ -291,9 +295,9 @@ p{text-wrap:pretty}
 .step{border-top:3px solid var(--green);padding-top:1.4rem}
 .step::before{
   counter-increment:s;content:counter(s);
-  display:block;font-family:var(--display);font-weight:700;
-  font-variation-settings:"opsz" 96;
-  font-size:2.7rem;line-height:1;color:var(--green);margin-bottom:.7rem;
+  display:block;font-family:var(--display);font-weight:900;
+  font-size:2.8rem;line-height:1;letter-spacing:-.04em;
+  color:var(--green);margin-bottom:.7rem;
 }
 .step h3{margin-bottom:.6rem}
 .step p{margin:0;color:var(--ink-70);font-size:1rem}
@@ -303,8 +307,8 @@ p{text-wrap:pretty}
 .review-head{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;justify-content:space-between}
 .score{display:flex;align-items:center;gap:1rem}
 .score-n{
-  font-family:var(--display);font-weight:700;font-size:3.6rem;line-height:1;
-  font-variation-settings:"opsz" 144;letter-spacing:-.04em;
+  font-family:var(--display);font-weight:900;font-size:3.6rem;line-height:1;
+  letter-spacing:-.045em;
   font-variant-numeric:tabular-nums;
 }
 .score-meta{font-size:.92rem;color:var(--ink-50);line-height:1.45}
@@ -312,9 +316,9 @@ p{text-wrap:pretty}
 @media(min-width:860px){ .grid-3{grid-template-columns:repeat(3,1fr)} }
 .review{background:#fff;border:1px solid var(--mint-10);border-radius:var(--r);padding:1.75rem;display:flex;flex-direction:column}
 .review blockquote{
-  margin:.9rem 0 1.5rem;font-family:var(--display);font-style:italic;
-  font-variation-settings:"opsz" 32;font-weight:400;
-  font-size:1.09rem;line-height:1.45;color:var(--ink-70);
+  margin:1rem 0 1.6rem;padding-left:1.1rem;
+  border-left:2px solid var(--sage);
+  font-size:1.01rem;line-height:1.62;color:var(--ink-70);
   hanging-punctuation:first;
 }
 .review footer{margin-top:auto;font-size:.9rem}
@@ -327,8 +331,8 @@ p{text-wrap:pretty}
 .faq details:last-of-type{border-bottom:1px solid var(--mint-10)}
 .faq summary{
   cursor:pointer;list-style:none;padding:1.4rem 3rem 1.4rem 0;position:relative;
-  font-family:var(--display);font-weight:600;font-size:1.14rem;
-  font-variation-settings:"opsz" 24;letter-spacing:-.014em;
+  font-family:var(--display);font-weight:700;font-size:1.12rem;
+  letter-spacing:-.018em;
 }
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{
