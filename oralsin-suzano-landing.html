@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implantes Dentários em Suzano | Oral Sin Implantes — Parque Suzano</title>
+<meta name="description" content="Clínica especializada em implantes dentários no Parque Suzano. Nota 4,9 no Google com 72 avaliações. Agende sua avaliação pelo WhatsApp.">
+
+<!--
+  ============================================================
+  IMAGENS
+  Todas as imagens desta página vêm do próprio site atual da
+  clínica (oralsinsuzano.com.br/wp-content/uploads/...), ou seja,
+  são assets que o cliente já possui.
+
+  ANTES DE PUBLICAR:
+  - Baixar, converter para WebP e hospedar no novo domínio.
+    Hotlink do WordPress antigo quebra no dia que ele sair do ar.
+  - Conferir as 3 fotos da galeria "estrutura" (nomes genéricos
+    de WhatsApp — verificar o que cada uma mostra de fato) e
+    ajustar os alt="" conforme o conteúdo real.
+  - Pedir 2 fotos novas: fachada na R. Sete de Setembro e equipe
+    completa. São as duas que mais faltam.
+
+  OUTROS PENDENTES:
+  1. [WHATSAPP] Confirmar o número. Está em 551128913620 (fixo).
+  2. [DEPOIMENTOS] Os 3 são FICTÍCIOS, só layout. NÃO PUBLICAR.
+     Buscar por data-placeholder.
+  3. [CRO] Nome do responsável técnico e CRO no rodapé.
+  4. [GOOGLE] Link do perfil de avaliações.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS
+
+   Paleta: escala de cor de esmalte dental (shade guide) resfriada
+   para o verde — o branco de porcelana permanece como base, mas
+   os neutros ganham subtom de menta e o escuro é um verde-floresta
+   em vez de preto. Verde carrega saúde e calma; o âmbar aparece
+   só nas estrelas, para dar calor onde a prova social está.
+   ============================================================ */
+:root{
+  --porcelain:#FBFDFB;
+  --mint-05:#F1F7F2;
+  --mint-10:#E4EFE7;
+  --mint-20:#CFE3D5;
+  --sage:#A8C6B2;
+  --green:#1B6E4B;
+  --green-dk:#0F4A33;
+  --forest:#0C2B21;
+  --ink:#16241F;
+  --ink-70:#3E524A;
+  --ink-50:#61756C;
+  --amber:#C98A1E;
+
+  --display:'Fraunces',Georgia,serif;
+  --body:'Instrument Sans',system-ui,-apple-system,sans-serif;
+
+  --wrap:1180px;
+  --gut:clamp(20px,5vw,64px);
+  --sect:clamp(64px,9vw,124px);
+  --r:16px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--porcelain);
+  color:var(--ink);
+  font-family:var(--body);
+  /* Público majoritariamente 45+: corpo base em 18px, nunca menos. */
+  font-size:18px;
+  line-height:1.62;
+  font-feature-settings:"kern" 1,"liga" 1;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.section{padding-block:var(--sect)}
+
+/* ============================================================
+   TIPOGRAFIA
+   Fraunces (serif variável) nos títulos, com eixo óptico ajustado
+   por tamanho: opsz alto nos títulos grandes deixa a serifa mais
+   fina e elegante; opsz baixo nos pequenos engrossa e mantém
+   legibilidade. Instrument Sans em corpo e interface.
+   ============================================================ */
+h1,h2,h3{
+  font-family:var(--display);
+  font-weight:600;margin:0;
+  line-height:1.04;letter-spacing:-.022em;
+  text-wrap:balance;
+}
+h1{
+  font-size:clamp(2.5rem,6.2vw,4.5rem);
+  font-variation-settings:"opsz" 120;
+  letter-spacing:-.032em;line-height:1.0;
+}
+h1 em{font-style:italic;font-weight:500;font-variation-settings:"opsz" 120}
+h2{
+  font-size:clamp(1.95rem,4.2vw,3.05rem);
+  font-variation-settings:"opsz" 72;
+  letter-spacing:-.028em;line-height:1.06;
+}
+h3{
+  font-size:clamp(1.18rem,2vw,1.42rem);
+  font-variation-settings:"opsz" 24;
+  font-weight:600;letter-spacing:-.012em;line-height:1.2;
+}
+p{text-wrap:pretty}
+
+.eyebrow{
+  font-family:var(--body);
+  font-size:.735rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.2em;color:var(--green);margin:0 0 1.15rem;
+}
+.lead{
+  font-size:clamp(1.06rem,1.7vw,1.24rem);
+  line-height:1.55;color:var(--ink-70);max-width:56ch;
+}
+.section > .wrap > .lead{margin-top:1.5rem}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- ASSINATURA: faixa de esmalte ----------
+   Tira de tons graduados, de porcelana a verde-floresta. Divide
+   seções e ancora o hero. É o único ornamento da página. */
+.shade{display:flex;height:8px;width:100%;overflow:hidden;border-radius:99px}
+.shade span{flex:1}
+.shade span:nth-child(1){background:var(--porcelain)}
+.shade span:nth-child(2){background:var(--mint-10)}
+.shade span:nth-child(3){background:var(--mint-20)}
+.shade span:nth-child(4){background:var(--sage)}
+.shade span:nth-child(5){background:var(--green)}
+.shade span:nth-child(6){background:var(--forest)}
+
+.divider{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.divider .shade{height:4px;opacity:.9}
+
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:var(--body);font-size:1.03rem;font-weight:600;
+  padding:1.05rem 1.75rem;border:0;border-radius:99px;cursor:pointer;
+  text-decoration:none;min-height:56px;
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 26px -14px rgba(15,74,51,.85)}
+.btn-primary:hover{background:var(--green-dk);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--green-dk)}
+.btn-light:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--mint-20)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green-dk);transform:translateY(-2px)}
+.btn svg{width:21px;height:21px;flex:none}
+.btn-note{font-size:.88rem;color:var(--ink-50);margin:.85rem 0 0}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-top:2rem}
+.phone-link{font-weight:600;text-decoration:none;border-bottom:2px solid var(--mint-20);padding-bottom:2px}
+.phone-link:hover{border-color:currentColor}
+
+/* ---------- HEADER ---------- */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,253,251,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--mint-10);
+}
+.header-in{
+  max-width:var(--wrap);margin:0 auto;padding:.8rem var(--gut);
+  display:flex;align-items:center;gap:1.5rem;
+}
+.brand{display:flex;flex-direction:column;line-height:1.1;text-decoration:none;margin-right:auto}
+.brand b{
+  font-family:var(--display);font-weight:700;font-size:1.24rem;
+  font-variation-settings:"opsz" 18;letter-spacing:-.02em;
+}
+.brand small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50)}
+.nav{display:none;gap:1.7rem}
+.nav a{font-size:.95rem;font-weight:500;text-decoration:none;color:var(--ink-70)}
+.nav a:hover{color:var(--green)}
+.header .btn{padding:.7rem 1.2rem;font-size:.92rem;min-height:46px}
+@media(min-width:940px){ .nav{display:flex} }
+
+/* ---------- HERO ---------- */
+.hero{padding-block:clamp(44px,6vw,84px) clamp(56px,7vw,96px)}
+.hero-grid{display:grid;gap:clamp(36px,5vw,60px);align-items:center}
+@media(min-width:900px){ .hero-grid{grid-template-columns:1.06fr .94fr} }
+.hero h1{margin-bottom:1.5rem}
+.hero .lead{max-width:47ch}
+.hero-rating{display:flex;align-items:center;gap:.75rem;margin-top:2.2rem;flex-wrap:wrap}
+.stars{color:var(--amber);letter-spacing:.1em;font-size:1.05rem}
+.hero-rating span{font-size:.95rem;color:var(--ink-50)}
+.hero-rating b{color:var(--ink)}
+
+.hero-media{position:relative}
+.hero-media figure{
+  margin:0;border-radius:var(--r);overflow:hidden;
+  background:var(--mint-10);aspect-ratio:4/5;
+}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.hero-media .shade{position:absolute;left:1.5rem;right:1.5rem;bottom:-4px;height:10px}
+
+/* ---------- BARRA DE CREDIBILIDADE ---------- */
+.credbar{background:var(--mint-05);border-block:1px solid var(--mint-10)}
+.credbar ul{
+  list-style:none;margin:0;padding-block:1.45rem;
+  display:grid;gap:.9rem 2.4rem;grid-template-columns:1fr;
+}
+@media(min-width:760px){ .credbar ul{grid-template-columns:repeat(4,auto);justify-content:space-between} }
+.credbar li{display:flex;align-items:center;gap:.6rem;font-size:.95rem;font-weight:500}
+.credbar svg{width:19px;height:19px;color:var(--green);flex:none}
+
+/* ---------- LISTA DE IDENTIFICAÇÃO ---------- */
+.pains{list-style:none;margin:2.6rem 0 0;padding:0;max-width:72ch}
+.pains li{
+  display:flex;gap:1.1rem;padding:1.35rem 0;
+  border-top:1px solid var(--mint-10);font-size:1.05rem;
+}
+.pains li:last-child{border-bottom:1px solid var(--mint-10)}
+.pains li::before{
+  content:"";width:9px;height:9px;border-radius:99px;
+  background:var(--sage);flex:none;margin-top:.62rem;
+}
+.closing{margin-top:2.4rem;max-width:58ch;font-size:1.05rem;color:var(--ink-70)}
+
+/* ---------- CARDS ---------- */
+.grid-2{display:grid;gap:1.1rem;margin-top:3rem}
+@media(min-width:800px){ .grid-2{grid-template-columns:1fr 1fr} }
+.card{
+  background:var(--mint-05);border:1px solid var(--mint-10);
+  border-radius:var(--r);padding:clamp(1.5rem,3vw,2.1rem);
+}
+.card h3{margin-bottom:.7rem}
+.card p{margin:0;color:var(--ink-70);font-size:1rem}
+.card-accent{background:#fff;border-color:var(--sage)}
+
+/* ---------- GALERIA DA ESTRUTURA ---------- */
+.gallery{display:grid;gap:.9rem;margin-top:1.1rem;grid-template-columns:repeat(3,1fr)}
+.gallery figure{margin:0;border-radius:var(--r);overflow:hidden;background:var(--mint-10);aspect-ratio:3/4}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.caption{margin:.9rem 0 0;font-size:.85rem;color:var(--ink-50)}
+
+/* ---------- SERVIÇOS ---------- */
+.svc-feature{display:grid;gap:1.1rem;margin-top:3rem}
+@media(min-width:860px){ .svc-feature{grid-template-columns:1.22fr 1fr} }
+.svc-main{
+  background:var(--forest);color:var(--porcelain);border-radius:var(--r);
+  padding:clamp(1.8rem,4vw,2.7rem);display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.svc-main .eyebrow{color:var(--sage)}
+.svc-main h3{font-size:clamp(1.65rem,3vw,2.15rem);font-variation-settings:"opsz" 48;margin-bottom:.9rem}
+.svc-main p{color:rgba(251,253,251,.78);margin:0 0 1.9rem;font-size:1.03rem;max-width:44ch}
+.svc-main > .shade{margin-bottom:1.7rem;height:6px;max-width:60%}
+.svc-main a{margin-top:auto;align-self:flex-start;position:relative;z-index:2}
+.svc-main img{
+  position:absolute;right:-6%;bottom:-8%;width:min(46%,260px);
+  opacity:.92;pointer-events:none;
+}
+@media(max-width:859px){ .svc-main img{position:static;width:170px;margin:1.6rem 0 .4rem} }
+
+.svc-list{list-style:none;margin:0;padding:0}
+.svc-list li{
+  display:flex;gap:1.1rem;align-items:center;
+  padding:1.05rem 0;border-top:1px solid var(--mint-10);
+}
+.svc-list li:last-child{border-bottom:1px solid var(--mint-10)}
+.svc-list .thumb{
+  width:62px;height:62px;flex:none;border-radius:12px;
+  background:var(--mint-05);border:1px solid var(--mint-10);
+  display:grid;place-items:center;overflow:hidden;
+}
+.svc-list .thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
+.svc-list b{
+  display:block;font-family:var(--display);font-weight:600;font-size:1.08rem;
+  font-variation-settings:"opsz" 20;letter-spacing:-.01em;line-height:1.25;
+}
+.svc-list span{font-size:.94rem;color:var(--ink-50);line-height:1.45}
+
+/* ---------- PASSOS (sequência real → numeração faz sentido) ---------- */
+.steps{display:grid;gap:2.2rem;margin-top:3.2rem;counter-reset:s}
+@media(min-width:820px){ .steps{grid-template-columns:repeat(3,1fr);gap:2.6rem} }
+.step{border-top:3px solid var(--green);padding-top:1.4rem}
+.step::before{
+  counter-increment:s;content:counter(s);
+  display:block;font-family:var(--display);font-weight:700;
+  font-variation-settings:"opsz" 96;
+  font-size:2.7rem;line-height:1;color:var(--green);margin-bottom:.7rem;
+}
+.step h3{margin-bottom:.6rem}
+.step p{margin:0;color:var(--ink-70);font-size:1rem}
+
+/* ---------- DEPOIMENTOS ---------- */
+.reviews{background:var(--mint-05);border-block:1px solid var(--mint-10)}
+.review-head{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;justify-content:space-between}
+.score{display:flex;align-items:center;gap:1rem}
+.score-n{
+  font-family:var(--display);font-weight:700;font-size:3.6rem;line-height:1;
+  font-variation-settings:"opsz" 144;letter-spacing:-.04em;
+  font-variant-numeric:tabular-nums;
+}
+.score-meta{font-size:.92rem;color:var(--ink-50);line-height:1.45}
+.grid-3{display:grid;gap:1.1rem;margin-top:2.8rem}
+@media(min-width:860px){ .grid-3{grid-template-columns:repeat(3,1fr)} }
+.review{background:#fff;border:1px solid var(--mint-10);border-radius:var(--r);padding:1.75rem;display:flex;flex-direction:column}
+.review blockquote{
+  margin:.9rem 0 1.5rem;font-family:var(--display);font-style:italic;
+  font-variation-settings:"opsz" 32;font-weight:400;
+  font-size:1.09rem;line-height:1.45;color:var(--ink-70);
+  hanging-punctuation:first;
+}
+.review footer{margin-top:auto;font-size:.9rem}
+.review footer b{display:block;font-weight:600}
+.review footer span{color:var(--ink-50)}
+
+/* ---------- FAQ ---------- */
+.faq{margin-top:3rem;max-width:76ch}
+.faq details{border-top:1px solid var(--mint-10)}
+.faq details:last-of-type{border-bottom:1px solid var(--mint-10)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.4rem 3rem 1.4rem 0;position:relative;
+  font-family:var(--display);font-weight:600;font-size:1.14rem;
+  font-variation-settings:"opsz" 24;letter-spacing:-.014em;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:.4rem;top:50%;width:13px;height:13px;
+  border-right:2px solid var(--green);border-bottom:2px solid var(--green);
+  transform:translateY(-70%) rotate(45deg);transition:transform .22s ease;
+}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.faq summary:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
+.faq-body{padding:0 2.5rem 1.6rem 0;margin:0;color:var(--ink-70);font-size:1.02rem;max-width:62ch}
+
+/* ---------- CTA FINAL ---------- */
+.cta-band{background:var(--green);color:#fff}
+.cta-band > .wrap > .shade{max-width:320px;margin-bottom:2.2rem}
+.cta-band h2{max-width:26ch}
+.cta-band p{color:rgba(255,255,255,.87);max-width:52ch;font-size:1.08rem;margin-top:1.3rem}
+.cta-band .btn-note{color:rgba(255,255,255,.78)}
+.cta-band .phone-link{border-color:rgba(255,255,255,.42);color:#fff}
+
+/* ---------- RODAPÉ ---------- */
+.footer{background:var(--forest);color:var(--mint-20);padding-block:clamp(56px,7vw,88px) 2rem}
+.footer-logo{width:184px;margin-bottom:2.6rem}
+.footer-grid{display:grid;gap:2.6rem}
+@media(min-width:900px){ .footer-grid{grid-template-columns:1fr 1fr 1.25fr;gap:3rem} }
+.footer h3{
+  font-family:var(--body);color:var(--porcelain);
+  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:600;margin-bottom:1rem;
+}
+.footer p{margin:0 0 .5rem;font-size:1rem;color:rgba(207,227,213,.85)}
+.footer a{color:var(--porcelain)}
+.footer .map{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05)}
+.footer .map iframe{width:100%;height:230px;border:0;display:block;filter:grayscale(.3)}
+.map-link{display:inline-block;margin-top:1rem;font-size:.95rem;font-weight:600}
+.legal{
+  margin-top:3.4rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.14);
+  font-size:.85rem;color:rgba(207,227,213,.62);display:grid;gap:.35rem;
+}
+
+/* ---------- BOTÃO FLUTUANTE ---------- */
+.float{
+  position:fixed;right:clamp(14px,3vw,26px);bottom:clamp(14px,3vw,26px);z-index:60;
+  box-shadow:0 14px 34px -10px rgba(12,43,33,.6);
+}
+@media(max-width:600px){
+  .float{left:14px;right:14px;bottom:14px;width:auto}
+  .footer{padding-bottom:6.5rem}
+}
+
+/* ---------- MOTION ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:6px}
+.cta-band :focus-visible,.footer :focus-visible,.svc-main :focus-visible{outline-color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<a href="#conteudo" class="sr">Pular para o conteúdo</a>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header-in">
+    <a class="brand" href="#top">
+      <b>Oral Sin</b>
+      <small>Implantes · Suzano</small>
+    </a>
+    <nav class="nav" aria-label="Seções da página">
+      <a href="#sobre">A clínica</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/551128913620?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-cta="header">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.96 1.36-.54.05-1.05.24-3.54-.98-2.98-1.46-4.85-4.6-5-4.81-.14-.22-1.18-1.66-1.18-3.16 0-1.5.79-2.24 1.07-2.55.28-.31.61-.39.82-.39.24 0 .47 0 .68.01.22.01.51-.08.79.6.29.7.98 2.4 1.07 2.57.09.17.15.37.03.6-.12.22-.24.36-.44.56-.2.2-.31.31-.44.53-.12.22-.28.46-.06.85.22.39.75 1.25 1.6 2.02 1.1.98 1.83 1.29 2.09 1.42.26.14.51.12.7-.07.2-.2.83-.96 1.05-1.29.22-.34.44-.28.74-.17.31.11 1.95.92 2.28 1.09.34.17.56.26.64.4.09.15.09.85-.14 1.53Z"/></svg>
+      Agendar
+    </a>
+  </div>
+</header>
+
+<main id="conteudo">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Implantes dentários em Suzano · Parque Suzano</p>
+      <h1>Voltar a sorrir, mastigar e falar <em>sem pensar duas vezes.</em></h1>
+      <p class="lead">Clínica especializada em implantes dentários no centro de Suzano. Atendimento humanizado e um plano de tratamento explicado sem enrolação, do início ao fim.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/551128913620?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-cta="hero">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.96 1.36-.54.05-1.05.24-3.54-.98-2.98-1.46-4.85-4.6-5-4.81-.14-.22-1.18-1.66-1.18-3.16 0-1.5.79-2.24 1.07-2.55.28-.31.61-.39.82-.39.24 0 .47 0 .68.01.22.01.51-.08.79.6.29.7.98 2.4 1.07 2.57.09.17.15.37.03.6-.12.22-.24.36-.44.56-.2.2-.31.31-.44.53-.12.22-.28.46-.06.85.22.39.75 1.25 1.6 2.02 1.1.98 1.83 1.29 2.09 1.42.26.14.51.12.7-.07.2-.2.83-.96 1.05-1.29.22-.34.44-.28.74-.17.31.11 1.95.92 2.28 1.09.34.17.56.26.64.4.09.15.09.85-.14 1.53Z"/></svg>
+          Agendar minha avaliação
+        </a>
+        <a class="btn btn-ghost" href="tel:+551128913620">Ligar: (11) 2891-3620</a>
+      </div>
+      <p class="btn-note">Resposta durante o horário comercial. Sem compromisso.</p>
+
+      <div class="hero-rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b class="num">4,9 no Google</b> · <span class="num">72</span> avaliações de pacientes da região</span>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <figure>
+        <img src="https://oralsinsuzano.com.br/wp-content/uploads/2025/07/Doutora-1-e1753884834593-768x1376.png"
+             width="768" height="1376"
+             alt="Dentista da unidade Oral Sin de Suzano no consultório">
+      </figure>
+      <div class="shade" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDIBILIDADE ============ -->
+<section class="credbar">
+  <div class="wrap">
+    <ul>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9l-6.07 3.4 1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg>
+        <span class="num">4,9 no Google · 72 avaliações</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+        <span>R. Sete de Setembro, 222</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 11h-4v-2h3V6h2v7h-1Z"/></svg>
+        <span>Seg. a sex., até às 18h</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2Z"/></svg>
+        <span>Atendimento por WhatsApp</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ IDENTIFICAÇÃO ============ -->
+<section class="section reveal">
+  <div class="wrap">
+    <p class="eyebrow">Talvez você se reconheça aqui</p>
+    <h2>Se alguma dessas frases é sobre você, a gente pode ajudar.</h2>
+    <ul class="pains">
+      <li>Você evita certos alimentos porque a mastigação de um lado não é mais confiável.</li>
+      <li>A prótese removível solta, machuca ou te deixa insegura para conversar.</li>
+      <li>Você já pesquisou sobre implante, mas ficou sem entender o que serve para o seu caso.</li>
+      <li>Você adia a consulta há meses com medo de ouvir que o seu caso não tem solução — ou de sentir dor.</li>
+    </ul>
+    <p class="closing">A primeira consulta existe justamente para isso: entender a sua situação, explicar as opções em português claro e te mostrar exatamente o que é possível fazer. Sem pressão para fechar nada no mesmo dia.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/551128913620?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20implante%20e%20gostaria%20de%20conversar." data-cta="dores">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.96 1.36-.54.05-1.05.24-3.54-.98-2.98-1.46-4.85-4.6-5-4.81-.14-.22-1.18-1.66-1.18-3.16 0-1.5.79-2.24 1.07-2.55.28-.31.61-.39.82-.39.24 0 .47 0 .68.01.22.01.51-.08.79.6.29.7.98 2.4 1.07 2.57.09.17.15.37.03.6-.12.22-.24.36-.44.56-.2.2-.31.31-.44.53-.12.22-.28.46-.06.85.22.39.75 1.25 1.6 2.02 1.1.98 1.83 1.29 2.09 1.42.26.14.51.12.7-.07.2-.2.83-.96 1.05-1.29.22-.34.44-.28.74-.17.31.11 1.95.92 2.28 1.09.34.17.56.26.64.4.09.15.09.85-.14 1.53Z"/></svg>
+        Tirar minhas dúvidas
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="shade" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+
+<!-- ============ SOBRE + DIFERENCIAIS ============ -->
+<section class="section reveal" id="sobre">
+  <div class="wrap">
+    <p class="eyebrow">A clínica</p>
+    <h2>Uma clínica de Suzano, para quem é de Suzano.</h2>
+    <p class="lead">Somos a unidade Oral Sin no Parque Suzano, parte de uma rede com quase duas décadas de experiência em reabilitação com implantes — com o atendimento de quem conhece o bairro, atende gente da região todos os dias e se importa em ser lembrada pelo nome.</p>
+
+    <!-- Galeria: verificar o conteúdo real de cada foto e ajustar os alt -->
+    <div class="gallery">
+      <figure>
+        <img loading="lazy" width="768" height="1365"
+             src="https://oralsinsuzano.com.br/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-30-at-11.26.19-768x1365.jpeg"
+             alt="Ambiente de atendimento da unidade Oral Sin Suzano">
+      </figure>
+      <figure>
+        <img loading="lazy" width="768" height="1365"
+             src="https://oralsinsuzano.com.br/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-30-at-11.26.19-1-768x1365.jpeg"
+             alt="Consultório equipado da unidade Oral Sin Suzano">
+      </figure>
+      <figure>
+        <img loading="lazy" width="768" height="1365"
+             src="https://oralsinsuzano.com.br/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-30-at-11.26.19-2-768x1365.jpeg"
+             alt="Equipe da unidade Oral Sin Suzano">
+      </figure>
+    </div>
+    <p class="caption">Nossos <span class="num">4,9</span> no Google, com <span class="num">72</span> avaliações, não vieram de campanha. Vieram de paciente que voltou, indicou e contou como foi.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Especialistas em implantes</h3>
+        <p>Nosso foco principal é reabilitação com implantes e próteses. Casos simples e casos complexos, com planejamento individual para cada boca.</p>
+      </div>
+      <div class="card">
+        <h3>Diagnóstico explicado de verdade</h3>
+        <p>Você sai da primeira consulta entendendo o seu caso: o que precisa ser feito, em quantas etapas e por quê. Sem termos técnicos, sem letras miúdas.</p>
+      </div>
+      <div class="card card-accent">
+        <h3>Um ambiente seguro para todo mundo</h3>
+        <p>Aqui você é tratada e chamada pelo nome que usa. Somos um espaço abertamente acolhedor para a comunidade LGBTQIA+ e para qualquer pessoa que já se sentiu julgada num consultório. Respeito não é diferencial de marketing: é o mínimo — e a gente cumpre.</p>
+      </div>
+      <div class="card">
+        <h3>Cuidado com quem tem medo de dentista</h3>
+        <p>Boa parte de quem chega aqui não vinha ao dentista há anos. A gente entende, respeita o seu ritmo e explica cada passo antes de fazer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section reveal" id="tratamentos">
+  <div class="wrap">
+    <p class="eyebrow">Tratamentos</p>
+    <h2>O que tratamos aqui.</h2>
+
+    <div class="svc-feature">
+      <div class="svc-main">
+        <div class="shade" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="eyebrow">Carro-chefe</p>
+        <h3>Implantes dentários</h3>
+        <p>Substituição da raiz do dente perdido por um pino de titânio, com coroa que devolve a aparência e a força da mastigação. De um dente único até a arcada completa.</p>
+        <a class="btn btn-light" href="https://wa.me/551128913620?text=Ol%C3%A1!%20Quero%20saber%20sobre%20implante%20dent%C3%A1rio." data-cta="servico-implante">Falar sobre implantes</a>
+        <img loading="lazy" width="768" height="832"
+             src="https://oralsinsuzano.com.br/wp-content/uploads/2025/05/Protese-Implante-1-768x832.png"
+             alt="Modelo de implante dentário com pino de titânio e coroa">
+      </div>
+
+      <div>
+        <ul class="svc-list">
+          <li>
+            <span class="thumb">
+              <img loading="lazy" src="https://oralsinsuzano.com.br/wp-content/uploads/2025/05/implant-supported-dentures-model-2-1.png" alt="">
+            </span>
+            <span>
+              <b>Prótese protocolo (arcada completa)</b>
+              <span>Prótese fixa sobre implantes para quem quer sair da dentadura removível. Não solta e não sai para comer.</span>
+            </span>
+          </li>
+          <li>
+            <span class="thumb">
+              <img loading="lazy" src="https://oralsinsuzano.com.br/wp-content/uploads/2025/05/Carillas-dentales-de-porcelana-removebg-768x578.png" alt="">
+            </span>
+            <span>
+              <b>Facetas de porcelana</b>
+              <span>Correção de forma, cor e simetria com desgaste mínimo do dente.</span>
+            </span>
+          </li>
+          <li>
+            <span class="thumb">
+              <img loading="lazy" src="https://oralsinsuzano.com.br/wp-content/uploads/2025/05/Conroe-2-scaled-removebg-768x611.png" alt="">
+            </span>
+            <span>
+              <b>Lentes de contato dental</b>
+              <span>Laminados extrafinos para redesenhar o sorriso.</span>
+            </span>
+          </li>
+          <li>
+            <span class="thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1B6E4B" stroke-width="1.6" style="width:26px;height:26px"><path d="M12 3c3 0 5 2 5 5 0 3-1 5-1 8 0 2-1 5-2 5s-1-3-2-5c0-1-.7-1-1 0-1 2-1 5-2 5s-2-3-2-5c0-3-1-5-1-8 0-3 2-5 5-5Z"/></svg>
+            </span>
+            <span>
+              <b>Clínica geral e prevenção</b>
+              <span>Limpeza, restauração, canal e acompanhamento de rotina.</span>
+            </span>
+          </li>
+          <li>
+            <span class="thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1B6E4B" stroke-width="1.6" style="width:26px;height:26px"><path d="M4 4h13l3 3v13H4V4Z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>
+            </span>
+            <span>
+              <b>Avaliação e plano de tratamento</b>
+              <span>Exames e planejamento por escrito antes de qualquer procedimento.</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="shade" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="section reveal">
+  <div class="wrap">
+    <p class="eyebrow">Como funciona</p>
+    <h2>Do primeiro “oi” ao sorriso novo.</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Você manda mensagem</h3>
+        <p>Um “oi” no WhatsApp é suficiente. A equipe pergunta o básico e encontra um horário que caiba na sua rotina.</p>
+      </div>
+      <div class="step">
+        <h3>Avaliação na clínica</h3>
+        <p>Exame, conversa e diagnóstico. Você entende o seu caso e recebe o plano de tratamento com as etapas e as condições, por escrito.</p>
+      </div>
+      <div class="step">
+        <h3>Tratamento no seu ritmo</h3>
+        <p>Você decide quando começar. A gente acompanha cada fase até o resultado final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<!--
+  ################  ATENÇÃO  ################
+  Os 3 depoimentos abaixo são FICTÍCIOS, escritos apenas para o
+  layout. NÃO PUBLICAR. Substituir por avaliações reais do perfil
+  do Google da unidade (nome e foto do autor). Depoimento inventado
+  em site de clínica é propaganda enganosa.
+  ###########################################
+-->
+<section class="section reviews reveal" id="avaliacoes">
+  <div class="wrap">
+    <div class="review-head">
+      <div>
+        <p class="eyebrow">Avaliações</p>
+        <h2>O que os pacientes falam.</h2>
+      </div>
+      <div class="score">
+        <span class="score-n">4,9</span>
+        <span class="score-meta">
+          <span class="stars" aria-hidden="true">★★★★★</span><br>
+          <span class="num">72</span> avaliações no Google
+        </span>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <article class="review" data-placeholder="true">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>“Usei dentadura por sete anos e já tinha desistido da ideia de implante. Fui só para ouvir um ‘não’ e saí com um plano que fazia sentido pro meu bolso. Hoje eu como pão de novo.”</blockquote>
+        <footer><b>Marlene S.</b><span>Prótese protocolo</span></footer>
+      </article>
+      <article class="review" data-placeholder="true">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>“Tenho pavor de dentista desde criança. Explicaram cada etapa antes de encostar em mim e pararam todas as vezes que eu pedi. Nunca fui tão bem tratado num consultório.”</blockquote>
+        <footer><b>Rodrigo A.</b><span>Implante unitário</span></footer>
+      </article>
+      <article class="review" data-placeholder="true">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>“Fomos recebidos como o casal que somos, sem aquele olhar de canto de olho que a gente já aprendeu a identificar. Isso importa tanto quanto o tratamento — que ficou impecável, aliás.”</blockquote>
+        <footer><b>Thiago e L.</b><span>Facetas</span></footer>
+      </article>
+    </div>
+
+    <div class="cta-row">
+      <!-- Trocar pelo link do perfil do Google da unidade -->
+      <a class="btn btn-ghost" href="#" data-cta="google-reviews">Ver todas as avaliações no Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section reveal">
+  <div class="wrap">
+    <p class="eyebrow">Dúvidas</p>
+    <h2>As perguntas que a gente mais escuta.</h2>
+
+    <div class="faq">
+      <details open>
+        <summary>Colocar implante dói?</summary>
+        <p class="faq-body">O procedimento é feito com anestesia local, então você não sente dor durante. No pós-operatório é comum algum incômodo por poucos dias, controlado com a medicação prescrita pelo dentista. A maior parte dos pacientes descreve como bem mais tranquilo do que imaginava.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo demora o tratamento?</summary>
+        <p class="faq-body">Depende do seu caso: da quantidade de dentes envolvidos e da condição do osso. Existem situações resolvidas em poucas semanas e outras que precisam de mais etapas. Só a avaliação presencial responde isso com honestidade — quem promete prazo por telefone está adivinhando.</p>
+      </details>
+      <details>
+        <summary>Quem não tem osso suficiente pode fazer implante?</summary>
+        <p class="faq-body">Em muitos casos, sim. Existem técnicas para trabalhar com osso reduzido ou para reconstruí-lo antes do implante. É um dos primeiros pontos que a avaliação verifica.</p>
+      </details>
+      <details>
+        <summary>A clínica atende por convênio ou pelo SUS?</summary>
+        <p class="faq-body">A Oral Sin é uma clínica particular e não atende por convênio nem pelo SUS. As condições de pagamento são apresentadas na avaliação, junto com o plano de tratamento.</p>
+      </details>
+      <details>
+        <summary>Onde vocês ficam e qual o horário?</summary>
+        <p class="faq-body">R. Sete de Setembro, 222 — Parque Suzano, Suzano — SP. De segunda a sexta, até às 18h.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-band">
+  <div class="wrap">
+    <div class="shade" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <h2>Sua avaliação começa com uma mensagem.</h2>
+    <p>Sem formulário longo, sem espera. Você manda um “oi”, a equipe responde e agenda o melhor horário para você.</p>
+    <div class="cta-row">
+      <a class="btn btn-light" href="https://wa.me/551128913620?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-cta="final">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.96 1.36-.54.05-1.05.24-3.54-.98-2.98-1.46-4.85-4.6-5-4.81-.14-.22-1.18-1.66-1.18-3.16 0-1.5.79-2.24 1.07-2.55.28-.31.61-.39.82-.39.24 0 .47 0 .68.01.22.01.51-.08.79.6.29.7.98 2.4 1.07 2.57.09.17.15.37.03.6-.12.22-.24.36-.44.56-.2.2-.31.31-.44.53-.12.22-.28.46-.06.85.22.39.75 1.25 1.6 2.02 1.1.98 1.83 1.29 2.09 1.42.26.14.51.12.7-.07.2-.2.83-.96 1.05-1.29.22-.34.44-.28.74-.17.31.11 1.95.92 2.28 1.09.34.17.56.26.64.4.09.15.09.85-.14 1.53Z"/></svg>
+        Agendar no WhatsApp
+      </a>
+      <a class="phone-link" href="tel:+551128913620">Ou ligue: (11) 2891-3620</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer" id="contato">
+  <div class="wrap">
+    <img class="footer-logo" loading="lazy" width="768" height="204"
+         src="https://oralsinsuzano.com.br/wp-content/uploads/2025/05/Logo-Oral-Sin-Branca-Menor-768x204.png"
+         alt="Oral Sin Implantes">
+
+    <div class="footer-grid">
+      <div>
+        <h3>Endereço</h3>
+        <p>R. Sete de Setembro, 222<br>Parque Suzano — Suzano, SP<br><span class="num">08673-020</span></p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=R.+Sete+de+Setembro,+222+-+Parque+Suzano,+Suzano+-+SP,+08673-020">Ver rota no Google Maps →</a>
+      </div>
+      <div>
+        <h3>Contato e horário</h3>
+        <p>Telefone: <a class="num" href="tel:+551128913620">(11) 2891-3620</a></p>
+        <p>WhatsApp: <a class="num" href="https://wa.me/551128913620">(11) 2891-3620</a></p>
+        <p style="margin-top:1.2rem">Segunda a sexta, até às 18h<br>Sábados, domingos e feriados: fechado</p>
+      </div>
+      <div>
+        <h3>Onde estamos</h3>
+        <div class="map">
+          <iframe
+            title="Mapa da unidade Oral Sin no Parque Suzano"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=R.+Sete+de+Setembro,+222+-+Parque+Suzano,+Suzano+-+SP,+08673-020&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal">
+      <!-- [CRO] Preencher antes de publicar — obrigatório pelo CFO -->
+      <span>Responsável técnico: [nome do dentista] — CRO-SP [número]</span>
+      <span>Oral Sin é uma clínica particular e não atende por convênio ou SUS.</span>
+      <span>© 2026 Oral Sin Implantes — Unidade Suzano. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BOTÃO FLUTUANTE ============ -->
+<a class="btn btn-primary float" href="https://wa.me/551128913620?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-cta="float">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.96 1.36-.54.05-1.05.24-3.54-.98-2.98-1.46-4.85-4.6-5-4.81-.14-.22-1.18-1.66-1.18-3.16 0-1.5.79-2.24 1.07-2.55.28-.31.61-.39.82-.39.24 0 .47 0 .68.01.22.01.51-.08.79.6.29.7.98 2.4 1.07 2.57.09.17.15.37.03.6-.12.22-.24.36-.44.56-.2.2-.31.31-.44.53-.12.22-.28.46-.06.85.22.39.75 1.25 1.6 2.02 1.1.98 1.83 1.29 2.09 1.42.26.14.51.12.7-.07.2-.2.83-.96 1.05-1.29.22-.34.44-.28.74-.17.31.11 1.95.92 2.28 1.09.34.17.56.26.64.4.09.15.09.85-.14 1.53Z"/></svg>
+  Agendar pelo WhatsApp
+</a>
+
+<!-- ============ SCHEMA ============ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Dentist",
+  "name":"Oral Sin Implantes — Suzano",
+  "description":"Clínica especializada em implantes dentários no Parque Suzano, Suzano — SP.",
+  "url":"https://oralsinsuzano.com.br/",
+  "telephone":"+551128913620",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"R. Sete de Setembro, 222",
+    "addressLocality":"Suzano",
+    "addressRegion":"SP",
+    "postalCode":"08673-020",
+    "addressCountry":"BR"
+  },
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "closes":"18:00"
+  }],
+  "aggregateRating":{
+    "@type":"AggregateRating",
+    "ratingValue":"4.9",
+    "reviewCount":"72"
+  },
+  "medicalSpecialty":"Dentistry"
+}
+</script>
+
+<script>
+/* Scroll reveal — leve, respeita prefers-reduced-motion via CSS */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* Rastreamento de clique em CTA.
+   Cada botão tem data-cta com a seção de origem — assim dá para
+   saber qual bloco converte, e não só o total de cliques. */
+document.querySelectorAll('[data-cta]').forEach(function(el){
+  el.addEventListener('click', function(){
+    var origem = el.getAttribute('data-cta');
+    if(window.dataLayer){ window.dataLayer.push({event:'click_whatsapp', cta_origem:origem}); }
+    if(typeof gtag === 'function'){ gtag('event','click_whatsapp',{cta_origem:origem}); }
+  });
+});
+</script>
+</body>
+</html>
